@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ruiehq/IdeasBox.git"
+    "url": "git+https://github.com/ruiehq/IdeaBox.git"
   },
   "author": "Ruie Dela Pena",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ruiehq/IdeasBox/issues"
+    "url": "https://github.com/ruiehq/IdeaBox/issues"
   },
-  "homepage": "https://github.com/ruiehq/IdeasBox#readme",
+  "homepage": "https://github.com/ruiehq/IdeaBox#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
