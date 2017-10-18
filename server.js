@@ -17,7 +17,7 @@ app.set('view engine', 'handlebars');
 
 // Index Page
 app.get('/', (req, res) => {
-   res.render('home', { title: 'Welcome' });
+   res.render('home', { title: 'Ruie to' });
 });
 
 // About Page
