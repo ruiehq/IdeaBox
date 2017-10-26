@@ -12,12 +12,12 @@ mongoose.connect('mongodb://localhost:27017', { useMongoClient: true })
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.engine('handlebars', hbs({ defaultLayout: 'default' }));
+app.engine('handlebars', hbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 // Index Page
 app.get('/', (req, res) => {
-   res.render('home', { title: 'Ruie to' });
+   res.render('index', { title: 'Ruie to' });
 });
 
 // About Page
