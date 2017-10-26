@@ -1,30 +1,26 @@
 const express = require('express');
-const app = express();
-const mongoose = require('mongoose');
 const hbs = require('express-handlebars');
+const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
-mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017', { useMongoClient: true })
-   .then(() => console.log('MongoDB Connected'))
-   .catch(err => console.log(err));
+const app = express();
+const PORT = 3000;
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
+// Middlewares
 app.engine('handlebars', hbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
-// Index Page
+// Routes
 app.get('/', (req, res) => {
-   res.render('index', { title: 'Ruie to' });
+   res.render('index');
 });
 
-// About Page
-app.get('/about', (req, res) => {
+app.get('/about', (req ,res) => {
    res.render('about');
-});
+})
 
-app.listen(5000, () => {
-   console.log(`Running at port: 5000`);
-});
+
+// Run Server
+app.listen(PORT, () => {
+   console.log(`App is running on PORT:${PORT}`);
+})
