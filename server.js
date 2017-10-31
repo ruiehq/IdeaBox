@@ -74,7 +74,7 @@ app.delete('/ideas/:id', (req, res) => {
       .then(() => {
          req.flash('success_msg', 'Idea Removed Successfully');
          res.redirect('/ideas');
-      })
+   })
 });
 
 app.get('/ideas/add', (req, res) => {
